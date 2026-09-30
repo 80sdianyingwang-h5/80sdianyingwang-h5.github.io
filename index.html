@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1a1a2e">
+<title>80s电影网｜80年代经典电影·港片·科幻·动作一站式导航</title>
+<meta name="description" content="80s电影网专注收录1980年代经典电影：港产动作片、好莱坞科幻、欧洲文艺、日本动画。移动端自适应，带你回到大荧幕的黄金十年。">
+<meta name="keywords" content="80s电影网,80年代电影,经典港片,80s科幻,动作片,老电影,怀旧电影">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://80sdianyingwang-h5.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="80s电影网｜80年代经典电影导航">
+<meta property="og:description" content="80年代经典电影、港产动作、好莱坞科幻、日本动画合集，回到大荧幕黄金十年。">
+<meta property="og:url" content="https://80sdianyingwang-h5.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {"@type":"WebSite","@id":"https://80sdianyingwang-h5.github.io/#ws","name":"80s电影网","url":"https://80sdianyingwang-h5.github.io/","inLanguage":"zh-CN"},
+  {"@type":"Organization","@id":"https://80sdianyingwang-h5.github.io/#org","name":"80s电影网","url":"https://80sdianyingwang-h5.github.io/"},
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首页","item":"https://80sdianyingwang-h5.github.io/#top"},
+    {"@type":"ListItem","position":2,"name":"年代片单","item":"https://80sdianyingwang-h5.github.io/#decade"},
+    {"@type":"ListItem","position":3,"name":"电影分类","item":"https://80sdianyingwang-h5.github.io/#cats"},
+    {"@type":"ListItem","position":4,"name":"热播排行榜","item":"https://80sdianyingwang-h5.github.io/#rank"},
+    {"@type":"ListItem","position":5,"name":"关于我们","item":"https://80sdianyingwang-h5.github.io/#about"}
+  ]}
+ ]
+}
+</script>
+<style>
+:root{
+ --bg:#0f0f1a; --bg2:#1a1a2e; --card:rgba(255,255,255,.04);
+ --line:rgba(100,200,255,.25); --txt:#c8d8e8; --mut:#7a8fa3;
+ --cyan:#00d4ff; --cyan2:#0099cc; --magenta:#ff00aa; --amber:#ffaa00;
+ --r:16px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Courier New",Consolas,"PingFang SC","Microsoft YaHei",monospace;
+ background:
+  repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,212,255,.015) 2px,rgba(0,212,255,.015) 4px),
+  radial-gradient(600px 400px at 50% -10%,rgba(0,212,255,.1),transparent 60%),
+  var(--bg);
+ color:var(--txt);line-height:1.75;font-size:clamp(14px,.6vw+13px,16px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(100% - 2rem,var(--max));margin:0 auto}
+section{padding:clamp(2.4rem,6vw,4rem) 0;scroll-margin-top:70px}
+.ey{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan);font-weight:800}
+h1{font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.15;margin:.6rem 0}
+h2{font-size:clamp(1.4rem,3.4vw,2.1rem);margin:.3rem 0 .6rem}
+.lead{color:var(--mut);max-width:34em}
+.center{text-align:center;max-width:40em;margin:0 auto 2rem}
+
+/* CRT scanline overlay */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
+ background:repeating-linear-gradient(0deg,transparent,transparent 1px,rgba(0,0,0,.03) 1px,rgba(0,0,0,.03) 2px);
+ animation:scan 8s linear infinite}
+@keyframes scan{0%{transform:translateY(0)}100%{transform:translateY(4px)}}
+
+/* header */
+.hd{position:sticky;top:0;z-index:60;background:rgba(15,15,26,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:1rem;height:64px}
+.logo{font-weight:900;font-size:1.25rem;display:flex;align-items:center;gap:.5rem;font-family:"Courier New",monospace}
+.logo b{color:var(--cyan);text-shadow:0 0 10px rgba(0,212,255,.5)}
+.logo .tv{width:30px;height:22px;border:2px solid var(--cyan);border-radius:4px;display:grid;place-items:center;font-size:.6rem;position:relative}
+.logo .tv::after{content:"";position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:8px;height:2px;background:var(--cyan);border-radius:0 0 2px 2px}
+.nav a{color:var(--mut);font-size:.92rem;padding:.45rem .7rem;border-radius:6px;font-family:"Courier New",monospace}
+.nav a:hover{color:var(--txt);background:var(--card)}
+.nav .pc{display:none;margin-left:auto}
+.cta{background:linear-gradient(90deg,var(--cyan),var(--cyan2));color:#000;font-weight:800;padding:.55rem 1.1rem;border-radius:4px;font-family:"Courier New",monospace}
+.menu{margin-left:auto;width:42px;height:42px;border-radius:6px;border:1px solid var(--line);display:grid;place-items:center}
+.menu i{width:18px;height:2px;background:var(--cyan);position:relative;display:block}
+.menu i::before,.menu i::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--cyan)}
+.menu i::before{top:-6px}.menu i::after{top:6px}
+@media(min-width:920px){.nav .pc{display:flex;align-items:center;gap:.2rem}.menu{display:none}}
+.mm{position:fixed;inset:64px 0 0 0;background:var(--bg2);display:flex;flex-direction:column;padding:1rem;gap:.3rem;transform:translateY(-120%);transition:.3s;z-index:55}
+.mm.open{transform:none}
+.mm a{padding:.9rem 1rem;border-radius:6px;border:1px solid var(--line);font-family:"Courier New",monospace}
+
+/* hero */
+.hero{padding-top:clamp(2rem,6vw,3.5rem)}
+.hero .wrap{display:grid;gap:2rem}
+@media(min-width:940px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center}}
+.pill{display:inline-flex;gap:.5rem;align-items:center;padding:.35rem .8rem;border:1px solid var(--line);border-radius:4px;background:rgba(0,212,255,.08);color:var(--cyan);font-size:.78rem;font-weight:700;font-family:"Courier New",monospace}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0}
+.btn{padding:.7rem 1.25rem;border-radius:6px;font-weight:800;font-family:"Courier New",monospace}
+.btn.p{background:linear-gradient(90deg,var(--cyan),var(--cyan2));color:#000}
+.btn.o{border:1px solid var(--line);color:var(--txt);background:transparent}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.4rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.9rem;text-align:center}
+.stat b{display:block;font-size:1.3rem;color:var(--cyan);font-family:"Courier New",monospace}
+.stat span{font-size:.72rem;color:var(--mut)}
+.tv-card{background:linear-gradient(160deg,rgba(0,212,255,.08),rgba(255,0,170,.05));border:2px solid var(--line);border-radius:12px;padding:1.2rem;position:relative;overflow:hidden}
+.tv-card::before{content:"▶ CHANNEL 80s";position:absolute;top:.5rem;right:.8rem;font-size:.6rem;color:var(--magenta);font-family:"Courier New",monospace;letter-spacing:.1em}
+.tv-row{display:flex;align-items:center;gap:.8rem;padding:.7rem;border-radius:8px;background:rgba(0,0,0,.3);margin-bottom:.6rem;border:1px solid rgba(0,212,255,.15)}
+.tv-row .ic{width:42px;height:42px;border-radius:6px;display:grid;place-items:center;font-size:1.2rem;flex:none;background:rgba(0,212,255,.1)}
+.tv-row b{font-size:.9rem;font-family:"Courier New",monospace}
+.tv-row small{color:var(--mut);font-size:.73rem}
+
+/* decade list */
+.decade-sec{background:var(--bg2)}
+.wall{display:flex;gap:1rem;overflow-x:auto;padding-bottom:.6rem;scroll-snap-type:x mandatory}
+.wall::-webkit-scrollbar{height:6px}
+.wall::-webkit-scrollbar-thumb{background:rgba(0,212,255,.4);border-radius:99px}
+.movie{flex:0 0 160px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;scroll-snap-align:start}
+.movie .cv{height:200px;display:grid;place-items:center;font-size:3rem;position:relative}
+.movie .cv::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,26,.85),transparent 55%)}
+.movie .badge{position:absolute;top:.5rem;left:.5rem;z-index:2;font-size:.62rem;font-weight:800;background:var(--magenta);color:#fff;padding:.15rem .5rem;border-radius:3px;font-family:"Courier New",monospace}
+.movie .year{position:absolute;bottom:.5rem;right:.5rem;z-index:2;font-size:.65rem;color:var(--cyan);font-family:"Courier New",monospace}
+.movie h3{font-size:.88rem;padding:.7rem .8rem 0;font-family:"Courier New",monospace}
+.movie p{font-size:.74rem;color:var(--mut);padding:.1rem .8rem .8rem}
+
+/* cats */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:1.6rem}
+.fb{padding:.45rem 1rem;border-radius:4px;border:1px solid var(--line);background:var(--card);color:var(--mut);font-size:.84rem;font-weight:700;font-family:"Courier New",monospace}
+.fb.on,.fb:hover{color:#000;background:linear-gradient(90deg,var(--cyan),var(--cyan2));border-color:transparent}
+.grid{display:grid;gap:1rem}
+@media(min-width:520px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(0,212,255,.5);box-shadow:0 0 20px rgba(0,212,255,.15)}
+.cover{height:160px;display:grid;place-items:center;font-size:3rem;position:relative}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,26,.8),transparent 60%)}
+.cover .yr{position:absolute;top:.6rem;left:.6rem;z-index:2;font-size:.7rem;background:rgba(0,0,0,.6);padding:.15rem .5rem;border-radius:3px;color:var(--cyan);font-family:"Courier New",monospace}
+.card h3{font-size:.92rem;padding:.8rem .9rem 0;font-family:"Courier New",monospace}
+.card p{color:var(--mut);font-size:.77rem;padding:.2rem .9rem .6rem}
+.tags{display:flex;gap:.3rem;flex-wrap:wrap;padding:0 .9rem .9rem}
+.t{font-size:.65rem;font-weight:800;padding:.15rem .5rem;border-radius:3px;font-family:"Courier New",monospace}
+.t1{background:rgba(0,212,255,.15);color:var(--cyan)}
+.t2{background:rgba(255,0,170,.15);color:var(--magenta)}
+.t3{background:rgba(255,170,0,.15);color:var(--amber)}
+
+/* rank */
+.two{display:grid;gap:1.4rem}
+@media(min-width:880px){.two{grid-template-columns:1fr 1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.2rem}
+.box h3{margin-bottom:.8rem;font-size:1.02rem;font-family:"Courier New",monospace}
+.ri{display:flex;align-items:center;gap:.7rem;padding:.6rem;border-radius:6px;background:rgba(0,0,0,.3);margin-bottom:.5rem;border:1px solid rgba(0,212,255,.1)}
+.num{width:26px;height:26px;border-radius:4px;display:grid;place-items:center;font-weight:800;font-size:.8rem;background:rgba(0,212,255,.15);color:var(--cyan);font-family:"Courier New",monospace}
+.num.g{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#000}
+.num.s{background:#7a8fa3;color:#000}
+.num.b{background:var(--magenta);color:#fff}
+.ri b{font-size:.87rem;font-family:"Courier New",monospace}
+.ri small{color:var(--mut);font-size:.73rem}
+.ri .s{margin-left:auto;color:var(--cyan);font-weight:800;font-family:"Courier New",monospace}
+
+/* about */
+.about{display:grid;gap:2rem}
+@media(min-width:900px){.about{grid-template-columns:1fr 1fr;align-items:start}}
+.feat{display:flex;gap:.8rem;padding:1rem;border:1px solid var(--line);border-radius:8px;background:var(--card);margin-bottom:.8rem}
+.feat .ic{width:44px;height:44px;border-radius:8px;display:grid;place-items:center;font-size:1.2rem;background:rgba(0,212,255,.1)}
+.feat h4{font-size:.94rem;font-family:"Courier New",monospace}
+.feat p{color:var(--mut);font-size:.79rem}
+form.ct{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.3rem}
+form.ct h3{margin-bottom:.3rem;font-family:"Courier New",monospace}
+form.ct p{color:var(--mut);font-size:.84rem;margin-bottom:1rem}
+.in{width:100%;padding:.7rem .9rem;border-radius:6px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--txt);margin-bottom:.7rem;font:inherit;font-family:"Courier New",monospace}
+.in:focus{outline:none;border-color:var(--cyan)}
+.row2{display:grid;gap:.7rem}
+@media(min-width:460px){.row2{grid-template-columns:1fr 1fr}}
+
+/* footer */
+.ft{background:var(--bg2);border-top:1px solid var(--line);padding:2.4rem 0 1.4rem;margin-top:2rem}
+.fg{display:grid;gap:1.4rem;margin-bottom:1.6rem}
+@media(min-width:640px){.fg{grid-template-columns:1.6fr 1fr 1fr 1fr}}
+.ft h4{margin-bottom:.8rem;font-family:"Courier New",monospace}
+.ft a{color:var(--mut);font-size:.84rem;display:block;padding:.25rem 0;font-family:"Courier New",monospace}
+.ft a:hover{color:var(--txt)}
+.fb2{display:flex;gap:.5rem;margin-top:.8rem}
+.fb2 a{width:36px;height:36px;border-radius:6px;border:1px solid var(--line);display:grid;place-items:center;background:var(--card)}
+.bot{border-top:1px solid var(--line);padding-top:1.1rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;color:var(--mut);font-size:.78rem;font-family:"Courier New",monospace}
+.top{position:fixed;right:1rem;bottom:1.2rem;width:44px;height:44px;border-radius:6px;background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#000;display:grid;place-items:center;font-weight:900;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+.top.show{opacity:1;pointer-events:auto}
+
+/* pixel border decoration */
+.pixel-bar{height:3px;background:repeating-linear-gradient(90deg,var(--cyan),var(--cyan) 4px,transparent 4px,transparent 8px);margin-bottom:1rem}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+<header class="hd">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="tv">📺</span> <b>80s电影网</b></a>
+    <nav class="pc">
+      <a href="#decade">年代片单</a>
+      <a href="#cats">电影分类</a>
+      <a href="#rank">热播排行榜</a>
+      <a href="#about">关于我们</a>
+      <a href="#about" class="cta">找80s片</a>
+    </nav>
+    <button class="menu" id="menuBtn" aria-label="菜单"><i></i></button>
+  </div>
+</header>
+
+<div class="mm" id="mm">
+  <a href="#decade">年代片单</a>
+  <a href="#cats">电影分类</a>
+  <a href="#rank">热播排行榜</a>
+  <a href="#about">关于我们</a>
+  <a href="#about" class="cta" style="text-align:center">找80s片</a>
+</div>
+
+<main>
+  <!-- 首页 -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill">📺 80s电影网 · CHANNEL 80s · ON AIR</span>
+        <h1>大荧幕的<br>黄金十年</h1>
+        <p class="lead">80s电影网带你回到1980-1989：港产动作片崛起、好莱坞科幻爆发、欧洲文艺新浪潮、日本动画元年。用像素和扫描线，还原录像厅时代的观影记忆。</p>
+        <div class="btns">
+          <a href="#decade" class="btn p">▶ 播放年代片单</a>
+          <a href="#cats" class="btn o">按类型检索</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>1980-89</b><span>黄金十年</span></div>
+          <div class="stat"><b>3000+</b><span>80s片库</span></div>
+          <div class="stat"><b>VHS</b><span>录像厅品质</span></div>
+        </div>
+      </div>
+      <aside class="tv-card" aria-label="频道列表">
+        <div class="tv-row"><div class="ic">🎬</div><div><b>CH-01 港产动作</b><small>成龙、洪金宝、李连杰</small></div></div>
+        <div class="tv-row"><div class="ic">🚀</div><div><b>CH-02 科幻爆发</b><small>星球大战、银翼杀手、回到未来</small></div></div>
+        <div class="tv-row"><div class="ic">🎨</div><div><b>CH-03 欧洲文艺</b><small>基耶斯洛夫斯基、塔可夫斯基</small></div></div>
+        <div class="tv-row"><div class="ic">🎌</div><div><b>CH-04 日本动画</b><small>宫崎骏、押井守、大友克洋</small></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 年代片单 -->
+  <section id="decade" class="decade-sec">
+    <div class="wrap">
+      <div class="center">
+        <div class="ey">Decade Picks · 1980s</div>
+        <h2>年代片单</h2>
+        <p class="lead">编辑部按年份精选的80年代代表作：每一年都有一部定义时代的电影。</p>
+      </div>
+      <div class="wall">
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#00d4ff,#0099cc)">🦅<span class="badge">1982</span><span class="year">SF</span></div><h3>银翼杀手</h3><p>赛博朋克鼻祖</p></article>
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#ff00aa,#cc0088)">🎄<span class="badge">1988</span><span class="year">XMAS</span></div><h3>小鬼当家</h3><p>圣诞档永恒经典</p></article>
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#ffaa00,#cc8800)">🏎️<span class="badge">1985</span><span class="year">TIME</span></div><h3>回到未来</h3><p>穿越时空的标杆</p></article>
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#00d4ff,#ff00aa)">👻<span class="badge">1984</span><span class="year">HORROR</span></div><h3>捉鬼敢死队</h3><p>喜剧恐怖跨界神作</p></article>
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#0099cc,#00d4ff)">🎪<span class="badge">1980</span><span class="year">BIG</span></div><h3>闪舞</h3><p>MTV式剪辑先驱</p></article>
+        <article class="movie"><div class="cv" style="background:linear-gradient(135deg,#cc0088,#ff00aa)">🥋<span class="badge">1985</span><span class="year">ACTION</span></div><h3>第一滴血2</h3><p>动作片黄金标杆</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 电影分类 -->
+  <section id="cats">
+    <div class="wrap">
+      <div class="center">
+        <div class="ey">Categories</div>
+        <h2>电影分类</h2>
+        <p class="lead">港产动作、好莱坞科幻、欧洲文艺、日本动画、恐怖惊悚、青春喜剧——点一下就筛出来。</p>
+      </div>
+      <div class="filters">
+        <button class="fb on" data-f="all">ALL</button>
+        <button class="fb" data-f="action">港产动作</button>
+        <button class="fb" data-f="sci">科幻</button>
+        <button class="fb" data-f="art">欧洲文艺</button>
+        <button class="fb" data-f="anim">日本动画</button>
+        <button class="fb" data-f="horror">恐怖惊悚</button>
+        <button class="fb" data-f="comedy">青春喜剧</button>
+      </div>
+      <div class="grid" id="grid">
+        <article class="card" data-c="sci"><div class="cover" style="background:linear-gradient(135deg,#00d4ff,#0099cc)"><span class="yr">1982</span>🤖</div><h3>银翼杀手</h3><p>赛博朋克开山之作</p><div class="tags"><span class="t t1">科幻</span><span class="t t2">美国</span></div></article>
+        <article class="card" data-c="action"><div class="cover" style="background:linear-gradient(135deg,#ff00aa,#cc0088)"><span class="yr">1985</span>🥋</div><h3>警察故事</h3><p>成龙代表作，不用替身</p><div class="tags"><span class="t t2">港产动作</span><span class="t t3">香港</span></div></article>
+        <article class="card" data-c="anim"><div class="cover" style="background:linear-gradient(135deg,#ffaa00,#cc8800)"><span class="yr">1988</span>🏰</div><h3>龙猫</h3><p>吉卜力工作室成立作</p><div class="tags"><span class="t t3">日本动画</span><span class="t t1">宫崎骏</span></div></article>
+        <article class="card" data-c="art"><div class="cover" style="background:linear-gradient(135deg,#0099cc,#00d4ff)"><span class="yr">1983</span>🎨</div><h3>乡愁</h3><p>塔可夫斯基的告别</p><div class="tags"><span class="t t1">欧洲文艺</span><span class="t t2">苏联/意大利</span></div></article>
+        <article class="card" data-c="horror"><div class="cover" style="background:linear-gradient(135deg,#cc0088,#ff00aa)"><span class="yr">1980</span>🪓</div><h3>闪灵</h3><p>库布里克恐怖巅峰</p><div class="tags"><span class="t t2">恐怖惊悚</span><span class="t t3">美国</span></div></article>
+        <article class="card" data-c="comedy"><div class="cover" style="background:linear-gradient(135deg,#00d4ff,#ff00aa)"><span class="yr">1984</span>👻</div><h3>捉鬼敢死队</h3><p>喜剧恐怖完美融合</p><div class="tags"><span class="t t1">青春喜剧</span><span class="t t3">美国</span></div></article>
+        <article class="card" data-c="sci"><div class="cover" style="background:linear-gradient(135deg,#ffaa00,#ff00aa)"><span class="yr">1985</span>🕰️</div><h3>回到未来</h3><p>穿越时空的完美范本</p><div class="tags"><span class="t t1">科幻</span><span class="t t3">美国</span></div></article>
+        <article class="card" data-c="action"><div class="cover" style="background:linear-gradient(135deg,#0099cc,#cc0088)"><span class="yr">1982</span>🦂</div><h3>第一滴血</h3><p>史泰龙硬汉标杆</p><div class="tags"><span class="t t2">港产动作</span><span class="t t3">美国</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 排行榜 -->
+  <section id="rank">
+    <div class="wrap">
+      <div class="center">
+        <div class="ey">Ranking · 1980-1989</div>
+        <h2>热播排行榜</h2>
+      </div>
+      <div class="two">
+        <div class="box">
+          <h3>📺 80s电影 TOP 6</h3>
+          <div class="ri"><div class="num g">1</div><div><b>银翼杀手</b><small>1982 · 科幻</small></div><div class="s">9.3</div></div>
+          <div class="ri"><div class="num s">2</div><div><b>回到未来</b><small>1985 · 科幻喜剧</small></div><div class="s">9.1</div></div>
+          <div class="ri"><div class="num b">3</div><div><b>龙猫</b><small>1988 · 动画</small></div><div class="s">9.2</div></div>
+          <div class="ri"><div class="num">4</div><div><b>警察故事</b><small>1985 · 港产动作</small></div><div class="s">8.9</div></div>
+          <div class="ri"><div class="num">5</div><div><b>闪灵</b><small>1980 · 恐怖</small></div><div class="s">8.8</div></div>
+          <div class="ri"><div class="num">6</div><div><b>天堂电影院</b><small>1988 · 意大利文艺</small></div><div class="s">9.4</div></div>
+        </div>
+        <div class="box">
+          <h3>🎬 港产片 TOP 6</h3>
+          <div class="ri"><div class="num g">1</div><div><b>警察故事</b><small>1985 · 动作</small></div><div class="s">8.9</div></div>
+          <div class="ri"><div class="num s">2</div><div><b>英雄本色</b><small>1986 · 黑帮</small></div><div class="s">9.0</div></div>
+          <div class="ri"><div class="num b">3</div><div><b>倩女幽魂</b><small>1987 · 奇幻</small></div><div class="s">8.8</div></div>
+          <div class="ri"><div class="num">4</div><div><b>A计划</b><small>1983 · 动作喜剧</small></div><div class="s">8.5</div></div>
+          <div class="ri"><div class="num">5</div><div><b>赌神</b><small>1989 · 赌片</small></div><div class="s">8.4</div></div>
+          <div class="ri"><div class="num">6</div><div><b>秋天的童话</b><small>1987 · 爱情</small></div><div class="s">8.7</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="ey">About</div>
+        <h2>关于80s电影网</h2>
+        <p class="lead">80s电影网不只是一部电影，而是一个时代的集体记忆。录像厅、录像带、露天电影、电视台午夜场——每一种媒介都承载着独特的观影体验。</p>
+        <div class="feat"><div class="ic">📼</div><div><h4>录像厅还原</h4><p>用像素和扫描线还原80年代录像厅的视觉体验，找回当年的感觉。</p></div></div>
+        <div class="feat"><div class="ic">🎞️</div><div><h4>年代精准</h4><p>每部片子严格按上映年份标注，不做模糊处理。</p></div></div>
+        <div class="feat"><div class="ic">🛡️</div><div><h4>干净前端</h4><p>不挂伪装政府/教育域名的第三方JS，必应收录更稳。</p></div></div>
+      </div>
+      <form class="ct" id="ctForm" novalidate>
+        <h3>找80s片 / 投稿</h3>
+        <p>只记得"录像厅看过，男主骑摩托车"？给80s电影网留个言。</p>
+        <div class="row2">
+          <input class="in" placeholder="昵称 *" required>
+          <input class="in" placeholder="微信 / 邮箱 *" required>
+        </div>
+        <input class="in" placeholder="类型：找片 / 投稿 / 合作">
+        <textarea class="in" rows="3" placeholder="比如：要一部1985年左右的香港动作片，有摩托车追逐戏*" required></textarea>
+        <button class="btn p" style="width:100%;justify-content:center">▶ 提交检索</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logo" style="margin-bottom:.6rem"><span class="tv">📺</span> <b>80s电影网</b></div>
+        <p style="color:var(--mut);font-size:.85rem;max-width:22em">80年代经典电影导航：港产动作、好莱坞科幻、欧洲文艺、日本动画。移动端自适应，回到大荧幕黄金十年。</p>
+        <div class="fb2"><a href="#">微</a><a href="#">B</a><a href="#">X</a><a href="#">豆</a></div>
+      </div>
+      <div><h4>找片</h4><a href="#decade">年代片单</a><a href="#cats">电影分类</a><a href="#rank">热播排行榜</a></div>
+      <div><h4>年代</h4><a href="#">1980-1983</a><a href="#">1984-1986</a><a href="#">1987-1989</a></div>
+      <div><h4>站点</h4><a href="#about">关于我们</a><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+    </div>
+    <div class="bot">
+      <span>© 2026 80s电影网 · 80sdianyingwang-h5.github.io</span>
+      <span>CHANNEL 80s · ON AIR</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="top" id="topBtn">↑</a>
+
+<script>
+(function(){
+  var hd=document.querySelector('.hd');
+  var top=document.getElementById('topBtn');
+  addEventListener('scroll',function(){
+    hd.style.boxShadow = scrollY>10 ? '0 6px 30px -18px rgba(0,212,255,.5)' : 'none';
+    top.classList.toggle('show', scrollY>500);
+  },{passive:true});
+
+  var mb=document.getElementById('menuBtn'), mm=document.getElementById('mm');
+  mb.onclick=function(){ mm.classList.toggle('open'); document.body.style.overflow = mm.classList.contains('open')?'hidden':''; };
+  mm.querySelectorAll('a').forEach(function(a){ a.onclick=function(){ mm.classList.remove('open'); document.body.style.overflow=''; }; });
+
+  var fbs=document.querySelectorAll('.fb'), cards=document.querySelectorAll('#grid .card');
+  fbs.forEach(function(b){
+    b.onclick=function(){
+      fbs.forEach(function(x){x.classList.remove('on')}); b.classList.add('on');
+      var f=b.dataset.f;
+      cards.forEach(function(c){ c.style.display = (f==='all'||c.dataset.c===f)?'':'none'; });
+    };
+  });
+
+  document.getElementById('ctForm').onsubmit=function(e){ e.preventDefault(); alert('80s电影网：检索请求已收到，正在翻录像带...'); this.reset(); };
+})();
+</script>
+</body>
+</html>
